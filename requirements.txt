@@ -1,0 +1,13 @@
+streamlit==1.46.1          # Framework del dashboard
+dask==2025.5.1             # Procesamiento eficiente de datos grandes
+pandas==2.3.0              # Manipulación de fechas y datos
+pyarrow==20.0.0            # Lectura/escritura de archivos Parquet
+plotly==6.2.0              # Visualizaciones interactivas
+altair==5.5.0              # Visualizaciones alternativas (no críticas si solo usas Plotly)
+numpy==2.3.1               # Base para operaciones numéricas
+fsspec==2025.5.1           # Necesario para Dask y Parquet
+toolz==1.0.0               # Utilidades internas de Dask
+packaging==25.0            # Manejo de versiones, requerido por varios
+matplotlib==3.10.3         # Útil si usas alguna visual secundaria o pruebas locales
+seaborn==0.13.2            # Opcional para análisis previos
+
