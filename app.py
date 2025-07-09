@@ -148,6 +148,8 @@ df_line_mun = (df_filt.groupby(["Entidad", "Municipio"])["Incidentes"]
     
 df_line_aff = (df_filt.groupby(["Fecha", "Bien jurídico afectado"])["Incidentes"]
                    .sum().compute().reset_index().sort_values("Fecha"))
+df_line_aff_sorted = (df_filt.groupby(["Bien jurídico afectado"])["Incidentes"]
+                     .sum().compute().reset_index().sort_values("Incidentes", ascending=False))
 df_line_aff_sorted = df_line_aff[df_line_aff['Incidentes'] > 0].sort_values('Incidentes', ascending=False)
 
 df_line_type = (df_filt.groupby(["Fecha", "Tipo de delito"])["Incidentes"]
@@ -229,7 +231,7 @@ with col1:
         st.markdown("### 📊 Incidents by Municipality")
 
         fig = px.bar(
-            df_line_mun,
+            df_line_mun[df_line_mun['Incidentes'] > 0],
             x="Municipio",
             y="Incidentes",
             color="Incidentes",
