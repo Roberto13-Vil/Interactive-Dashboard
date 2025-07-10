@@ -37,14 +37,9 @@ st.markdown("<div class='subtitle'>Explore reported incidents in Mexico with int
 
 alt.themes.enable("dark")
 # ---------- Data loading ---------- #
+@st.cache_resource
 def load_dask():
-    df = dd.read_parquet("Data/cleaned_data")
-
-    df_sorted = df.sort_values("Fecha", ascending=False)
-
-    df_sampled = df_sorted.head(1_000_000, compute=False)
-
-    return df_sampled.persist()
+    return dd.read_parquet("Data/reduced_data.parquet")
 
 df = load_dask()
 
