@@ -42,7 +42,7 @@ def load_dask():
 
     df_sorted = df.sort_values("Fecha", ascending=False)
 
-    df_sampled = df_sorted.head(2_000_000, compute=False)
+    df_sampled = df_sorted.head(1_000_000, compute=False)
 
     return df_sampled.persist()
 
