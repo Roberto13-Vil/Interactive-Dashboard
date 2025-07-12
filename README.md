@@ -19,9 +19,8 @@ The dashboard was built using Python, Streamlit and DuckDB, combining efficient 
 
 - Python 3.10+
 - [Streamlit](https://streamlit.io/)
-- [DuckDB](https://duckdb.org/)
-- Pandas & Polars (optional processing)
-- Plotly / Altair
+- Pandas & Dask (optional processing)
+- Streamlit & Plotly
 - Parquet files for efficient data storage
 
 ---
