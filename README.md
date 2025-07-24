@@ -8,7 +8,7 @@ The dashboard was built using Python, Streamlit and DuckDB, combining efficient 
 ## 🚀 Features
 
 - Interactive filters by **state**, **year**, **month**, and **type of crime**
-- Real-time queries using **DuckDB** on `.parquet` files
+- Real-time queries using `.parquet` files
 - Visualizations with **Plotly** and **Altair**
 - Clean, responsive layout using **Streamlit**
 - Data preprocessing and transformation steps included
@@ -19,7 +19,7 @@ The dashboard was built using Python, Streamlit and DuckDB, combining efficient 
 
 - Python 3.10+
 - [Streamlit](https://streamlit.io/)
-- Pandas & Dask (optional processing)
+- Pandas & Dask
 - Streamlit & Plotly
 - Parquet files for efficient data storage
 
